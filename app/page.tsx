@@ -18,46 +18,46 @@ type TechItem = {
 }
 
 const techStack: TechItem[] = [
-  { name: "JavaScript", logo: "🟨", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/javascript.png" },//
-  { name: "TypeScript", logo: "🔷", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/typescript.png" },//
-  { name: "React", logo: "⚛️", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/react.png" },//
-  { name: "Next.js", logo: "▲", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/nextjs.png" },//
-  { name: "HTML", logo: "🧱", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/html.png" },//
-  { name: "CSS", logo: "🎨", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/css.svg" },//
-  { name: "Python", logo: "🐍", category: "Backend", proficiency: "Fluent", imageSrc: "/images/python.png" },
-  { name: "Java", logo: "☕", category: "Backend", proficiency: "Used it before", imageSrc: "/images/java.png" },
-  { name: "C", logo: "⚙️", category: "Systems", proficiency: "Used it before", imageSrc: "/images/c.png" },
-  { name: "C++", logo: "🔧", category: "Systems", proficiency: "Used it before", imageSrc: "/images/cpp.png" },
-  { name: "C#", logo: "🔷", category: "Backend", proficiency: "Learning", imageSrc: "/images/csharp.png" },
+  { name: "JavaScript", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/javascript.png" },//
+  { name: "TypeScript", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/typescript.png" },//
+  { name: "React", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/react.png" },//
+  { name: "Next.js", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/nextjs.png" },//
+  { name: "HTML", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/html.png" },//
+  { name: "CSS", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/css.svg" },//
+  { name: "Python", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/python.png" },//
+  { name: "Java", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/java.png" },//
+  { name: "C", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/c.png" },//
+  { name: "C++", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/cpp.png" },//
+  { name: "C#", logo: "", category: "Backend", proficiency: "Learning", imageSrc: "/images/csharp.svg" },//
   { name: "Go", logo: "", category: "Backend", proficiency: "Learning", imageSrc: "/images/go-logo.png" },//
   { name: "Rust", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/rust.png" },//
-  { name: "PHP", logo: "🐘", category: "Backend", proficiency: "Used it before", imageSrc: "/images/php.png" },
-  { name: "SQL", logo: "🗄️", category: "Database", proficiency: "Fluent", imageSrc: "/images/sql.png" },
-  { name: "PostgreSQL", logo: "🐘", category: "Database", proficiency: "Fluent", imageSrc: "/images/postgresql.png" },
-  { name: "MongoDB", logo: "🍃", category: "Database", proficiency: "Used it before", imageSrc: "/images/mongodb.png" },
-  { name: "Git", logo: "📚", category: "Tools", proficiency: "Fluent", imageSrc: "/images/git.png" },
+  { name: "PHP", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/php.svg" },//
+  { name: "SQL", logo: "", category: "Database", proficiency: "Fluent", imageSrc: "/images/sql.png" },//
+  { name: "PostgreSQL", logo: "", category: "Database", proficiency: "Fluent", imageSrc: "/images/postgresql.png" },//
+  { name: "MongoDB", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/mongodb.svg" },//
+  { name: "Git", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/git.png" },//
+  { name: "Github", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/github.svg" },//
   { name: "Docker", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/docker-logo.png" },//
-  { name: "Bun", logo: "", category: "Runtime", proficiency: "Learning", imageSrc: "/images/bao-logo.png" },
+  { name: "Bun", logo: "", category: "Runtime", proficiency: "Learning", imageSrc: "/images/bao-logo.png" },//
   { name: "Laravel", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/laravel-logo-red.png" },//
-  { name: "Vite", logo: "", category: "Frontend", proficiency: "Used it before", imageSrc: "/images/vite.png" },
-  { name: "Vitest", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/vitest.png" },
-  { name: "MySQL", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/mysql.png" },
-  { name: "SQLite", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/sqlite.png" },
-  { name: "Latex", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/latex.png" },
-  { name: "R", logo: "", category: "Data Science", proficiency: "Used it before", imageSrc: "/images/r.png" },
-  { name: "Firebase", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/firebase.png" },
-  { name: "Postman", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/postman.png" },
-  { name: "VS Code", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/vscode.png" },
+  { name: "Vite", logo: "", category: "Frontend", proficiency: "Used it before", imageSrc: "/images/vite.png" },//
+  { name: "Vitest", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/vitest.svg" },//
+  { name: "SQLite", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/sqlite.png" },//
+  { name: "Latex", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/latex.png" },//
+  { name: "R", logo: "", category: "Data Science", proficiency: "Used it before", imageSrc: "/images/r.png" },//
+  { name: "Firebase", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/firebase.png" },//
+  { name: "Postman", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/postman.png" },//
+  { name: "VS Code", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/vscode.png" },//
   { name: "RabbitMQ", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/rabbitmq.png" },//
-  { name: "Eslint", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/eslint.png" },
-  { name: "Ubuntu", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/ubuntu.png" },
-  { name: "CUDA", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/cuda.png" },
-  { name: "Jira", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/jira.png" },
-  { name: "Prisma", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/prisma.png" },
-  { name: "ChatGPT", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/chatgpt.png" },
-  { name: "Gemini", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/gemini.png" },
-  { name: "V0", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/v0.png" },
-  { name: "Deepseek", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/deepseek.png" },
+  { name: "Eslint", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/eslint.png" },//
+  { name: "Ubuntu", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/ubuntu.png" },//
+  { name: "CUDA", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/cuda.svg" },// --
+  { name: "Jira", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/jira.svg" },// --
+  { name: "Prisma", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/prisma.svg" },// --
+  { name: "ChatGPT", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/chatgpt.png" },//
+  { name: "Gemini", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/gemini.png" },//
+  { name: "V0", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/v0.png" },//
+  { name: "Deepseek", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/deepseek.png" },//
 ]
 
 
