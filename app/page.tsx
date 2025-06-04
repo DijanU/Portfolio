@@ -66,29 +66,32 @@ const projects = [
   {
     id: 1,
     title: "Steamom - Study Case",
-    description: "HCI, Next.js implementation",
+    description: "HCI, Next.js prototype",
     duration: "4:32",
     plays: "1,234,567",
     tech: "Next.js, React, TypeScript",
     completed: true,
+    url: "https://www.canva.com/design/DAGnkGXX6DI/Dv8Ywiy9oAS3Q_jObVe0Eg/edit?utm_content=DAGnkGXX6DI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   },
   {
     id: 2,
-    title: "Indie Play - Study Case",
-    description: "HCI, Next.js gaming platform",
+    title: "IndiePlay - Study Case",
+    description: "HCI, Next.js prototype",
     duration: "3:45",
     plays: "987,654",
     tech: "Next.js, React, Game APIs",
     completed: true,
+    url: "https://www.canva.com/design/DAGpWKbXMCI/N9X-UVrFsZckZj_XkY3BUA/edit?utm_content=DAGpWKbXMCI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   },
   {
     id: 3,
-    title: "CSS-only Animation Project",
+    title: "CSS-only - Barcelona Shield",
     description: "Pure CSS animations and effects",
     duration: "5:12",
     plays: "756,432",
     tech: "HTML, CSS",
     completed: false,
+    url: "https://calicheoficial.lat/luis/CSS-only/",
   },
   {
     id: 4,
@@ -98,30 +101,32 @@ const projects = [
     plays: "543,210",
     tech: "Node.js, Express, PostgreSQL",
     completed: true,
+    url: "#",
   },
   {
     id: 5,
-    title: "Git Repository Manager",
-    description: "Version control automation tool",
+    title: "Git Repo",
+    description: "missing",
     duration: "3:56",
     plays: "432,109",
     tech: "Python, Git, CLI",
     completed: false,
+    url: "#",
   },
 ]
 
 const aboutMeItems = [
   {
     title: "Git",
-    description: "Version control enthusiast, clean commit history advocate",
+    description: "DijanU",
   },
   {
     title: "Discord",
-    description: "Active in dev communities, always ready to help debug",
+    description: "Dijan11#7366",
   },
   {
     title: "Email",
-    description: "Professional communication, quick response time",
+    description: "luisfran11padilla@gmail.com",
   },
   {
     title: "Love for Math",
@@ -344,7 +349,8 @@ export default function SpotifyPortfolio() {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="grid grid-cols-12 gap-4 px-4 py-3 hover:bg-zinc-800 rounded-md group cursor-pointer"
+                className="grid grid-cols-12 gap-4 px-4 py-3 hover:bg-zinc-800 rounded-md group cursor-pointer relative"
+                onClick={() => window.open(project.url, "_blank")}
               >
                 <div className="col-span-1 text-zinc-400">{project.completed ? "✅" : "⏳"}</div>
                 <div className="col-span-5">
@@ -354,6 +360,9 @@ export default function SpotifyPortfolio() {
                 <div className="col-span-3 text-sm text-zinc-400">{project.tech}</div>
                 <div className="col-span-2 text-sm text-zinc-400">{project.plays}</div>
                 <div className="col-span-1 text-sm text-zinc-400">{project.duration}</div>
+
+                {/* Hover effect to indicate clickable */}
+                <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-5 rounded-md transition-opacity"></div>
               </div>
             ))}
           </div>
