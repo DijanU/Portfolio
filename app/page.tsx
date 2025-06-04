@@ -25,7 +25,7 @@ const techStack: TechItem[] = [
   { name: "HTML", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/html.png" },//
   { name: "CSS", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/css.svg" },//
   { name: "Python", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/python.png" },//
-  { name: "Java", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/java.png" },//
+  { name: "Java", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/java.png" },//
   { name: "C", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/c.png" },//
   { name: "C++", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/cpp.png" },//
   { name: "C#", logo: "", category: "Backend", proficiency: "Learning", imageSrc: "/images/csharp.svg" },//
@@ -42,8 +42,8 @@ const techStack: TechItem[] = [
   { name: "Laravel", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/laravel-logo-red.png" },//
   { name: "Vite", logo: "", category: "Frontend", proficiency: "Used it before", imageSrc: "/images/vite.png" },//
   { name: "Vitest", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/vitest.svg" },//
-  { name: "SQLite", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/sqlite.png" },//
-  { name: "Latex", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/latex.png" },//
+  { name: "SQLite", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/sqlite.svg" },//
+  { name: "Overleaf", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/overleaf.png" },// --
   { name: "R", logo: "", category: "Data Science", proficiency: "Used it before", imageSrc: "/images/r.png" },//
   { name: "Firebase", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/firebase.png" },//
   { name: "Postman", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/postman.png" },//
@@ -52,8 +52,8 @@ const techStack: TechItem[] = [
   { name: "Eslint", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/eslint.png" },//
   { name: "Ubuntu", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/ubuntu.png" },//
   { name: "CUDA", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/cuda.svg" },// --
-  { name: "Jira", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/jira.svg" },// --
-  { name: "Prisma", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/prisma.svg" },// --
+  { name: "Jira", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/jira.svg" },// 
+  { name: "Prisma", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/prisma.png" },// --
   { name: "ChatGPT", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/chatgpt.png" },//
   { name: "Gemini", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/gemini.png" },//
   { name: "V0", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/v0.png" },//
