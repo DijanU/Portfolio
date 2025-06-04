@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer's HTML Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr; /* lado izquierdo, centro, lado derecho */
+                gap: 20px;
+
+        }
+        h1 {
+            text-align: center;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00; }
+        }
+        .ascii-art {
+            text-align: center;
+            font-size: 12px;
+            margin: 20px 0;
+            color: #00aa00;
+        }
+        .joke {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #00ff00;
+            font-style: italic;
+        }
+        .back-link {
+            display: inline-block;
+            color: #00ff00;
+            text-decoration: none;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+        .terminal {
+            background-color: #000;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        .prompt {
+            color: #00ff00;
+        }
+        .command {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dijan__dev (Backend dev's Version)</h1>
+        
+        <div class="ascii-art">
+            <pre>
+    ╔══════════════════════════════════════╗
+    ║           BACKEND DEVELOPER          ║
+    ║              HTML EDITION            ║
+    ╚══════════════════════════════════════╝
+            </pre>
+        </div>
+                <p>Computer Science E. [==========__________] 50%</p>
+
+                <p>Applied Mathematics [=======_____________] 35%</p>
+
+        <a href="javascript:window.close()" class="back-link">← Back to React Portfolio</a>
+    <div class="container">
+        
+
+        <div class="joke">
+            <h2>Techs</h2>
+            <ul>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Go</li>
+            <li>Rust</li>
+            <li>PHP</li>
+            <li>SQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>Bun</li>
+            <li>Laravel</li>
+            <li>Vercel</li>
+            <li>Vite</li>
+            <li>Vitest</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>Latex</li>
+            <li>R</li>
+            <li>Firebase</li>
+            <li>Postman</li>
+            <li>VS Code</li>
+            <li>RabbitMQ</li>
+            <li>Eslint</li>
+            <li>Ubuntu</li>
+            <li>CUDA</li>
+            <li>Jira</li>
+            <li>Prisma</li>
+            <li>ChatGPT</li>
+            <li>Gemini</li>
+            <li>V0</li>
+            <li>Deepseek</li>
+            </ul>
+
+        </div>
+
+        <div class="terminal">
+            <div class="prompt">user@portfolio:~$ <span class="command">cat about_me.txt</span></div>
+            <p>Name: Backend Developer Extraordinaire</p>
+            <p>Specialties: Making things work behind the scenes</p>
+            <p>Favorite HTTP Status: 200 OK</p>
+            <p>Least Favorite: 500 Internal Server Error</p>
+            <p>Coffee Consumption: Infinite Loop</p>
+            
+            <div class="prompt">user@portfolio:~$ <span class="command">ls skills/</span></div>
+            <p>node.js  python  databases  apis  microservices  docker</p>
+            
+            <div class="prompt">user@portfolio:~$ <span class="command">echo "Thanks for visiting!"</span></div>
+            <p>Thanks for visiting!</p>
+        </div>
+        <div>
+            <h2>About me</h2>
+        </div>
+
+
+        
+    </div>
+
+    <script>
+        // A little JavaScript never hurt anyone...
+        console.log("Even backend developers need a little frontend magic sometimes! 🎩✨");
+        
+        // Easter egg: Konami code
+        let konamiCode = [];
+        const sequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > sequence.length) {
+                konamiCode.shift();
+            }
+            if (konamiCode.toString() === sequence.toString()) {
+                alert("🎉 Konami Code activated! You found the backend developer's secret!");
+            }
+        });
+    </script>
+</body>
+</html>
