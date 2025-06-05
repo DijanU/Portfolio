@@ -90,65 +90,100 @@ const projects = [
     duration: "5:12",
     plays: "756,432",
     tech: "HTML, CSS",
-    completed: false,
+    completed: true,
     url: "https://calicheoficial.lat/luis/CSS-only/",
   },
   {
     id: 4,
-    title: "Backend API Service",
-    description: "RESTful API with authentication",
+    title: "Pro Calculator",
+    description: "iPhones calculator competition (not really)",
     duration: "6:28",
     plays: "543,210",
-    tech: "Node.js, Express, PostgreSQL",
+    tech: "Bun.js, Vite, React",
     completed: true,
-    url: "#",
+    url: "https://calicheoficial.lat/luis/calcu/",
   },
   {
     id: 5,
-    title: "Git Repo",
-    description: "missing",
+    title: "HTML only",
+    description: "Get to know my humor ina short story",
     duration: "3:56",
     plays: "432,109",
-    tech: "Python, Git, CLI",
+    tech: "HTML",
+    completed: true,
+    url: "https://calicheoficial.lat/luis/html/",
+  },
+    {
+    id: 6,
+    title: "Poolcenter",
+    description: "DB & backend endpoints",
+    duration: "3:56",
+    plays: "24,505",
+    tech: "Express.js, PostgreSQL",
     completed: false,
-    url: "#",
+    url: "https://poolcenter.fun/",
   },
 ]
 
 const aboutMeItems = [
   {
-    title: "Git",
-    description: "DijanU",
+    title: "Secret Identity",
+    description: "Luis Francisco Padilla — but you can call me Dijan.",
   },
   {
-    title: "Discord",
-    description: "Dijan11#7366",
+    title: "Vibe",
+    description:
+      "- Matcha-fueled, low-key developer with a taste for clean code and abstract chaos.\n" +
+      "- Improvisation Expert: I like to be as surprised as the people around me are by my achievements.\n" +
+      "- Dark Mode: Required\n" +
+      "- Kills: 137 bugs squashed\n" +
+      "- Last Save: Today, 03:14 AM",
   },
   {
-    title: "Email",
-    description: "luisfran11padilla@gmail.com",
+    title: "Main Quests",
+    description:
+      "- Computer Science Engineering student\n" +
+      "- Gymbro mode: Bodybuilding + aesthetics",
   },
   {
-    title: "Love for Math",
-    description: "Applied Mathematics student, algorithm optimization geek",
+    title: "Secondary Quests",
+    description:
+      "- Applied Math student & algorithm optimization geek\n" +
+      "- Music discovery: indiewave supporter\n" +
+      "- Football Midfielder: the goal dealer",
   },
   {
-    title: "Love for Videogames",
-    description: "Gaming enthusiast, indie game supporter, retro collector",
+    title: "Side Quests",
+    description:
+      "Breaking stuff to learn fast. Optimizing for fun. Exploring weird tech.\n\"Not all bugs are enemies — some are teachers.\"",
   },
   {
-    title: "My Vibe",
-    description: "Chill developer, coffee addict, night owl coder",
+    title: "Music",
+    description:
+      "Alt rock, punk, grunge, metal, chillwave, and game OSTs.\nCode flows better to rhythm.",
   },
   {
-    title: "Music Taste",
-    description: "Electronic, lo-fi, synthwave - coding soundtrack curator",
+    title: "Favorite Show",
+    description:
+      "Cowboy Bebop — jazz, space melancholy, nonlinear perfection. Nothing tops it.",
   },
   {
-    title: "Fav Series",
-    description: "Sci-fi, tech documentaries, anime - story-driven content",
+    title: "Gaming Lore",
+    description:
+      "Started gaming at age 3.\nHack & Slash and DOOM-core lover.\nIndie game supporter with a retro soul.",
   },
-]
+  {
+    title: "Dev Tools",
+    description:
+      "VS Code, Git, Docker, Firebase, Postman, Vercel — and a terminal I actually trust.",
+  },
+{
+  title: "Contact",
+  description:
+    "Git: DijanU\nEmail: luisfran11padilla@gmail.com",
+},
+];
+
 
 export default function SpotifyPortfolio() {
   const [currentDegree, setCurrentDegree] = useState(0)
@@ -197,6 +232,16 @@ export default function SpotifyPortfolio() {
       default:
         return "text-zinc-400"
     }
+  }
+
+    // Function to render text with line breaks
+  const renderTextWithLineBreaks = (text: string) => {
+    return text.split("\n").map((line, index) => (
+      <span key={index}>
+        {line}
+        {index < text.split("\n").length - 1 && <br />}
+      </span>
+    ))
   }
 
   return (
@@ -385,7 +430,7 @@ export default function SpotifyPortfolio() {
                   </button>
                   {expandedAbout === index && (
                     <div className="px-3 py-2">
-                      <p className="text-xs text-zinc-400 leading-relaxed">{item.description}</p>
+                      <p className="text-xs text-zinc-400 leading-relaxed">{renderTextWithLineBreaks(item.description)}</p>
                     </div>
                   )}
                 </div>
