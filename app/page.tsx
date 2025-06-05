@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Heart, MoreHorizontal, Clock, ChevronDown, Info } from "lucide-react"
+import { Heart, MoreHorizontal, Clock, ChevronDown, Info, CheckCircle, Circle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -78,7 +78,7 @@ const projects = [
     title: "IndiePlay - Study Case",
     description: "HCI, Next.js prototype",
     duration: "3:45",
-    plays: "987,654",
+    plays: "987,653",
     tech: "Next.js, React, Game APIs",
     completed: true,
     url: "https://www.canva.com/design/DAGpWKbXMCI/N9X-UVrFsZckZj_XkY3BUA/edit?utm_content=DAGpWKbXMCI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
@@ -88,7 +88,7 @@ const projects = [
     title: "CSS-only - Barcelona Shield",
     description: "Pure CSS animations and effects",
     duration: "5:12",
-    plays: "756,432",
+    plays: "756,431",
     tech: "HTML, CSS",
     completed: true,
     url: "https://calicheoficial.lat/luis/CSS-only/",
@@ -98,7 +98,7 @@ const projects = [
     title: "Pro Calculator",
     description: "iPhones calculator competition (not really)",
     duration: "6:28",
-    plays: "543,210",
+    plays: "543,209",
     tech: "Bun.js, Vite, React",
     completed: true,
     url: "https://calicheoficial.lat/luis/calcu/",
@@ -108,7 +108,7 @@ const projects = [
     title: "HTML only",
     description: "Get to know my humor ina short story",
     duration: "3:56",
-    plays: "432,109",
+    plays: "432,107",
     tech: "HTML",
     completed: true,
     url: "https://calicheoficial.lat/luis/html/",
@@ -118,10 +118,30 @@ const projects = [
     title: "Poolcenter",
     description: "DB & backend endpoints",
     duration: "3:56",
-    plays: "24,505",
+    plays: "79,561",
     tech: "Express.js, PostgreSQL",
     completed: false,
     url: "https://poolcenter.fun/",
+  },
+  {
+    id: 7,
+    title: "Postgres transaction Crash tests",
+    description: "Github repo",
+    duration: "3:56",
+    plays: "24,503",
+    tech: "Rust, PostgreSQL",
+    completed: true,
+    url: "https://github.com/nilsmuralles/Rust-Eze.git",
+  },
+  {
+    id: 8,
+    title: "Monty Hall game Monte Carlo Simulation",
+    description: "Github repo",
+    duration: "3:56",
+    plays: "7,231",
+    tech: "Python",
+    completed: true,
+    url: "https://github.com/DijanU/TP_Proyecto4.git",
   },
 ]
 
@@ -397,7 +417,11 @@ export default function SpotifyPortfolio() {
                 className="grid grid-cols-12 gap-4 px-4 py-3 hover:bg-zinc-800 rounded-md group cursor-pointer relative"
                 onClick={() => window.open(project.url, "_blank")}
               >
-                <div className="col-span-1 text-zinc-400">{project.completed ? "✅" : "⏳"}</div>
+                <div className="col-span-1 text-zinc-400">{project.completed ? (
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  ) : (
+                    <Circle className="w-4 h-4 text-zinc-500" />
+                  )}</div>
                 <div className="col-span-5">
                   <div className="font-medium">{project.title}</div>
                   <div className="text-sm text-zinc-400">{project.description}</div>
