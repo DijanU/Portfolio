@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Heart, MoreHorizontal, Clock, ChevronDown, Info, CheckCircle, Circle } from "lucide-react"
+import { Heart, MoreHorizontal, Clock, ChevronDown, Info, CheckCircle, Circle, Bookmark } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -18,32 +18,32 @@ type TechItem = {
 }
 
 const techStack: TechItem[] = [
-  { name: "JavaScript", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/javascript.png" },//
+  { name: "C", logo: "", category: "Systems", proficiency: "Fluent", imageSrc: "/images/c.png" },//
+  { name: "C++", logo: "", category: "Systems", proficiency: "Fluent", imageSrc: "/images/cpp.png" },//
+  { name: "C#", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/csharp.svg" },//
   { name: "TypeScript", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/typescript.png" },//
   { name: "React", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/react.png" },//
-  { name: "Next.js", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/nextjs.png" },//
+  { name: "JavaScript", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/javascript.png" },//
+  { name: "Next.js", logo: "", category: "Frontend", proficiency: "Learning", imageSrc: "/images/nextjs.png" },//
   { name: "HTML", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/html.png" },//
   { name: "CSS", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/css.svg" },//
   { name: "Python", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/python.png" },//
   { name: "Java", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/java.png" },//
-  { name: "C", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/c.png" },//
-  { name: "C++", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/cpp.png" },//
-  { name: "C#", logo: "", category: "Backend", proficiency: "Learning", imageSrc: "/images/csharp.svg" },//
-  { name: "Go", logo: "", category: "Backend", proficiency: "Learning", imageSrc: "/images/go-logo.png" },//
-  { name: "Rust", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/rust.png" },//
+  { name: "Go", logo: "", category: "Backend", proficiency: "Fluent", imageSrc: "/images/go-logo.png" },//
+  { name: "Rust", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/rust.png" },//
   { name: "PHP", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/php.svg" },//
   { name: "SQL", logo: "", category: "Database", proficiency: "Fluent", imageSrc: "/images/sql.png" },//
   { name: "PostgreSQL", logo: "", category: "Database", proficiency: "Fluent", imageSrc: "/images/postgresql.png" },//
-  { name: "MongoDB", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/mongodb.svg" },//
+  { name: "MongoDB", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/mongodb.svg" },//
   { name: "Git", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/git.png" },//
   { name: "Github", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/github.svg" },//
   { name: "Docker", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/docker-logo.png" },//
-  { name: "Bun", logo: "", category: "Runtime", proficiency: "Learning", imageSrc: "/images/bao-logo.png" },//
+  { name: "Bun", logo: "", category: "Runtime", proficiency: "Fluent", imageSrc: "/images/bao-logo.png" },//
   { name: "Laravel", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/laravel-logo-red.png" },//
-  { name: "Vite", logo: "", category: "Frontend", proficiency: "Used it before", imageSrc: "/images/vite.png" },//
+  { name: "Vite", logo: "", category: "Frontend", proficiency: "Fluent", imageSrc: "/images/vite.png" },//
   { name: "Vitest", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/vitest.svg" },//
   { name: "SQLite", logo: "", category: "Database", proficiency: "Used it before", imageSrc: "/images/sqlite.svg" },//
-  { name: "Overleaf", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/overleaf.png" },// --
+  { name: "Overleaf", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/overleaf.png" },// --
   { name: "R", logo: "", category: "Data Science", proficiency: "Used it before", imageSrc: "/images/r.png" },//
   { name: "Firebase", logo: "", category: "Backend", proficiency: "Used it before", imageSrc: "/images/firebase.png" },//
   { name: "Postman", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/postman.png" },//
@@ -51,13 +51,13 @@ const techStack: TechItem[] = [
   { name: "RabbitMQ", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/rabbitmq.png" },//
   { name: "Eslint", logo: "", category: "Tools", proficiency: "Fluent", imageSrc: "/images/eslint.png" },//
   { name: "Ubuntu", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/ubuntu.png" },//
-  { name: "CUDA", logo: "", category: "Systems", proficiency: "Learning", imageSrc: "/images/cuda.svg" },// --
-  { name: "Jira", logo: "", category: "Tools", proficiency: "Used it before", imageSrc: "/images/jira.svg" },// 
+  { name: "CUDA", logo: "", category: "Systems", proficiency: "Used it before", imageSrc: "/images/cuda.svg" },// --
+  { name: "Jira", logo: "", category: "Tools", proficiency: "Learning", imageSrc: "/images/jira.svg" },// 
   { name: "Prisma", logo: "", category: "Database", proficiency: "Learning", imageSrc: "/images/prisma.png" },// --
   { name: "ChatGPT", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/chatgpt.png" },//
-  { name: "Gemini", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/gemini.png" },//
-  { name: "V0", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/v0.png" },//
-  { name: "Deepseek", logo: "", category: "AI", proficiency: "Learning", imageSrc: "/images/deepseek.png" },//
+  { name: "Gemini", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/gemini.png" },//
+  { name: "V0", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/v0.png" },//
+  { name: "Deepseek", logo: "", category: "AI", proficiency: "Fluent", imageSrc: "/images/deepseek.png" },//
 ]
 
 
@@ -175,12 +175,12 @@ const aboutMeItems = [
   {
     title: "Side Quests",
     description:
-      "Breaking stuff to learn fast. Optimizing for fun. Exploring weird tech.\n\"Not all bugs are enemies — some are teachers.\"",
+      "- Breaking stuff to learn fast. Optimizing for fun.\n - Exploring weird tech.\n\"- Not all bugs are enemies — some are teachers.\"",
   },
   {
     title: "Music",
     description:
-      "Alt rock, punk, grunge, metal, chillwave, and game OSTs.\nCode flows better to rhythm.",
+      "- Alt rock, punk, grunge, metal, chillwave, and game OSTs.\n- Code flows better to rhythm.",
   },
   {
     title: "Favorite Show",
@@ -190,7 +190,7 @@ const aboutMeItems = [
   {
     title: "Gaming Lore",
     description:
-      "Started gaming at age 3.\nHack & Slash and DOOM-core lover.\nIndie game supporter with a retro soul.",
+      "- Started gaming at age 3.\n- Hack & Slash and DOOM-core lover.\n- Indie game supporter with a retro soul.",
   },
   {
     title: "Dev Tools",
@@ -208,6 +208,8 @@ const aboutMeItems = [
 export default function SpotifyPortfolio() {
   const [currentDegree, setCurrentDegree] = useState(0)
   const [expandedAbout, setExpandedAbout] = useState<number | null>(null)
+  const [isFavorited, setIsFavorited] = useState(false) //<- HERE (new state for favorite status)
+  const [showBookmarkTooltip, setShowBookmarkTooltip] = useState(false) //<- HERE (new state for tooltip visibility)
 
   const degrees = [
     {
@@ -220,12 +222,48 @@ export default function SpotifyPortfolio() {
       name: "Applied Mathematics",
       progress: 35,
       color: "from-green-600 to-blue-600",
-      image: "/images/applied-math.png",
+      image: "/images/applied-math.svg",
     },
   ]
 
   const toggleMajor = () => {
     setCurrentDegree((prev) => (prev + 1) % 2)
+  }
+
+  const handleFavoriteClick = () => {
+    setIsFavorited(!isFavorited)
+
+    // Show helpful tooltip
+    setShowBookmarkTooltip(true)
+    setTimeout(() => setShowBookmarkTooltip(false), 3000)
+
+    // Try different bookmark methods based on browser
+    const url = window.location.href
+    const title = "Dijan__dev - Portfolio"
+
+    // Method 1: Try the old bookmark method (works in some older browsers)
+    if ((window as any).sidebar && (window as any).sidebar.addPanel) {
+      ;(window as any).sidebar.addPanel(title, url, "")
+    }
+    // Method 2: Try Internet Explorer method
+    else if ((window as any).external && (window as any).external.AddFavorite) {
+      ;(window as any).external.AddFavorite(url, title)
+    }
+    // Method 3: Show instructions for manual bookmarking
+    else {
+      // For modern browsers, we can't add bookmarks directly
+      // But we can copy the URL to clipboard as a helpful gesture
+      if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(url)
+          .then(() => {
+            console.log("Portfolio URL copied to clipboard!")
+          })
+          .catch(() => {
+            console.log("Could not copy URL to clipboard")
+          })
+      }
+    }
   }
 
   const getProficiencyColor = (proficiency: string) => {
@@ -389,10 +427,34 @@ export default function SpotifyPortfolio() {
             </div>
 
             <div className="flex items-center space-x-4 mb-8">
-              <div className="text-2xl font-bold text-green-400">Proyectos</div>
-              <Button variant="ghost" size="icon">
-                <Heart className="w-6 h-6" />
-              </Button>
+              <div className="text-2xl font-bold text-green-400">Projects</div>
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={handleFavoriteClick}
+                  className={`transition-colors ${isFavorited ? "text-red-500 hover:text-red-400" : "text-zinc-400 hover:text-red-500"}`}
+                >
+                  <Heart className={`w-6 h-6 ${isFavorited ? "fill-current" : ""}`} />
+                </Button>
+
+                {/* <- HERE (new bookmark instruction tooltip) */}
+                {showBookmarkTooltip && (
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50">
+                    <div className="bg-zinc-800 text-white rounded-md shadow-lg p-3 w-64">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <Bookmark className="w-4 h-4 text-green-400" />
+                        <span className="font-medium text-sm">Bookmark this portfolio!</span>
+                      </div>
+                      <p className="text-xs text-zinc-300">
+                        Press <kbd className="bg-zinc-700 px-1 rounded">Ctrl+D</kbd> (or{" "}
+                        <kbd className="bg-zinc-700 px-1 rounded">Cmd+D</kbd> on Mac) to bookmark this page
+                      </p>
+                      <p className="text-xs text-zinc-400 mt-1">URL copied to clipboard! 📋</p>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Button variant="ghost" size="icon">
                 <MoreHorizontal className="w-6 h-6" />
               </Button>
